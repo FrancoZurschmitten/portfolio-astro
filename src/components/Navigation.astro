@@ -16,6 +16,11 @@ const navLinks = [
     label: "Contacto",
     href: "/#Contact",
   },
+  {
+    label: "Ver CV",
+    href: "https://drive.google.com/file/d/1FfkxRCAlkaCV5lb0R904VneyTaqhKIs4/view",
+    target: "_blank",
+  },
 ];
 ---
 
@@ -25,9 +30,13 @@ const navLinks = [
     <nav>
       <ul class="menu">
         {
-          navLinks.map(({ label, href }) => (
+          navLinks.map(({ label, href, target }) => (
             <li>
-              <a class="link" href={href}>
+              <a
+                class={"link " + (target ? "color" : "")}
+                target={target}
+                href={href}
+              >
                 {label}
               </a>
             </li>
@@ -68,8 +77,6 @@ const navLinks = [
       color: rgb(var(--primary-color));
       transition: none;
     }
-
-    
   }
 
   .menu {
@@ -88,5 +95,10 @@ const navLinks = [
       background-color: rgba(var(--background-color), 0.3);
       transition: none;
     }
+  }
+
+  .color {
+    color: rgb(var(--primary-color));
+    font-weight: bold;
   }
 </style>
