@@ -1,0 +1,50 @@
+---
+import gymtrackerImg from "../../public/projects/gymtracker-home.png";
+---
+
+<section id="TopProjects">
+  <h2>Proyectos</h2>
+  <ul class="list-top-projects">
+    <li>
+      <h3>Gym Tracker</h3>
+      <a href="https://gymtracker-app.vercel.app" target="_blank">
+        <img
+          class="project-image"
+          alt="GymTrackerImage"
+          src={gymtrackerImg.src}
+        />
+      </a>
+      <p>
+        GymTracker es una App para registrar tu progreso en tus entrenamientos,
+        puedes crear tus ejercicios, que utilizaras para registrar en notas tus
+        repeticiones, pesos, descarsos y más.
+      </p>
+      <p>
+        Es una App Full Stack, con una backend en Django y un frontend con
+        Nextjs. Utilize tailwind y NextUI para los estilos y la estructura de
+        mis componentes, e implementando Clean Architecture para la
+        escalabilidad de mi proyecto. Para la autenticación use NextAuth. En el
+        backend utilize Django, rest framework y allauth como base para mi API
+        Rest.
+      </p>
+      <p>
+        Es el proyecto mas relevante que tengo para mostrar, en él encontre la
+        práctica de lo que iba aprendiendo. Haz click en la imagen para darle un
+        vístaso.
+      </p>
+    </li>
+  </ul>
+</section>
+
+<style>
+  .list-top-projects {
+    list-style: none;
+    padding: 0;
+  }
+  .project-image {
+    width: 100%;
+    &:hover {
+      filter: brightness(150%);
+    }
+  }
+</style>

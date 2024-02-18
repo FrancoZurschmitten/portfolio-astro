@@ -1,0 +1,46 @@
+---
+import meImg from "../../public/me.jpg";
+const locationUrl =
+  "https://www.google.com/maps/place/Rafaela,+Santa+Fe+Province/@-31.2548303,-61.487783,13z/data=!3m1!4b1!4m6!3m5!1s0x95caae460db27c0f:0x8be1b926d473c17b!8m2!3d-31.2525979!4d-61.4916422!16zL20vMDdfbTZz?entry=ttu";
+---
+
+<section id="AboutMe">
+  <h2>¿Quién soy?</h2>
+  <div class="container">
+    <img class="me-img" src={meImg.src} width={256} />
+    <div>
+      <p>
+        Hola, mi nombre es Franco Daniel Zurschmitten, tengo 21 años y soy de
+        <a href={locationUrl} target="_blank" class="location"
+          >Rafaela, Santa Fe, Argentina</a
+        >.
+      </p><p>
+        Me recibí como Técnico en Informática Profesional y Personal en la
+        escuela E.E.T.P Nº 460 "Guillermo Lehmann". Luego curse la universidad
+        en Ingeniería en Computación en por un tiempo. Actualmente tengo un
+        trabajo no realcionado con la programación. En paralelo, me gustaba
+        aprender y leer libros por mi cuenta. La mayor parte de mis habilidades
+        se las debo a mi aprendizaje autodidacta.
+      </p><p>
+        Mi objetivo es aportar mis conocimientos a la sociedad y poder crecer
+        como profesional en esta área.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .container {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .me-img {
+    border: 1px solid rgb(var(--secondary-color));
+  }
+
+  .location {
+    color: rgb(var(--primary-color));
+    text-decoration: none;
+  }
+</style>

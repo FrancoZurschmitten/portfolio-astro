@@ -1,0 +1,98 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import gymtrackerImg from "../../public/projects/gymtracker-home.png";
+import portfolioImg from "../../public/projects/portfolio-astro-home.png";
+
+const allProjects = [
+  {
+    name: "Gym tracker",
+    image: gymtrackerImg,
+    description:
+      "GymTracker es una app para registrar tu progreso en tus entrenamientos," +
+      " puedes crear tus ejercicios, que utilizaras para registrar en notas" +
+      " tus repeticiones, pesos, descarsos y más. " +
+      "En esta app trabaje durante todo mi trayecto, en el fui volcando" +
+      " mis conocimientos aprendidos a medida que estudiaba. " +
+      "Todavia hay mucho por hacer, tiene mucha escalabilidad y potencial para ser una buena app.",
+    technologies: [
+      "Python",
+      "Django",
+      "Rest Framework",
+      "Javacript",
+      "HTML",
+      "CSS",
+      "Nextjs",
+      "NextAuth",
+      "Tailwind",
+      "NextUI",
+    ],
+    url: "https://gymtracker-app.vercel.app",
+    repository: "https://github.com/FrancoZurschmitten/gymtracker",
+  },
+  {
+    name: "Portfolio",
+    image: portfolioImg,
+    description:
+      "Este proyecto es esta misma pagina web, que es un pequeño portoflio" +
+      " en el que estube trabajando 1 día. Use Astro porque creo que es la" +
+      " mejor opcion en este caso de uso.",
+    technologies: ["Astro", "Javacript", "HTML", "CSS"],
+  },
+];
+---
+
+<BaseLayout pageTitle="Mis Proyectos">
+  {
+    allProjects.map(
+      ({ name, image, description, technologies, url, repository }, index) => (
+        <section>
+          <h2>{name}</h2>
+          <img class="project-image" alt={`${name} image`} src={image.src} />
+          <p>{description}</p>
+          {url ? (
+            <p>
+              <a target="_blank" class="link" href={url}>
+                Url del proyecto en producción
+              </a>
+            </p>
+          ) : null}
+          {repository ? (
+            <p>
+              <a target="_blank" class="link" href={repository}>
+                Ver repositorio en Github
+              </a>
+            </p>
+          ) : null}
+          <ul class="tech-list">
+            {technologies.map((tech) => (
+              <li>{tech}</li>
+            ))}
+          </ul>
+          {index !== allProjects.length - 1 ? <hr /> : null}
+        </section>
+      )
+    )
+  }
+</BaseLayout>
+
+<style>
+  .project-image {
+    width: 100%;
+  }
+  .link {
+    color: rgb(var(--primary-color));
+    text-decoration: none;
+  }
+  .tech-list {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0;
+    flex-wrap: wrap;
+    list-style: none;
+    li {
+      color: rgb(var(--background-color));
+      background-color: rgb(var(--foreground-color));
+      padding: 0.1rem 0.3rem;
+    }
+  }
+</style>

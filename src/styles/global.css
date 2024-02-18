@@ -1,0 +1,46 @@
+:root {
+  --primary-color: 233, 84, 32;
+  --secondary-color: 119, 33, 111;
+  --tertiary-color: 94, 39, 80;
+  --background-color: 247, 247, 247;
+  --foreground-color: 38, 38, 38;
+}
+
+body {
+  margin: 0;
+  font-family: "Ubuntu variable", "Ubuntu", -apple-system, "Segoe UI", "Roboto",
+    "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 13pt;
+}
+
+main {
+  max-width: 1024px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(var(--primary-color));
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+hr {
+  border-top: 1px solid rgba(var(--foreground-color), 0.1);
+}
+
+section {
+  margin: 3rem 0;
+}

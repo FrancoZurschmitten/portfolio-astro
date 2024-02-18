@@ -1,0 +1,92 @@
+---
+const navLinks = [
+  {
+    label: "Inicio",
+    href: "/",
+  },
+  {
+    label: "Proyectos",
+    href: "/projects",
+  },
+  {
+    label: "Acerca de",
+    href: "/#AboutMe",
+  },
+  {
+    label: "Contacto",
+    href: "/#Contact",
+  },
+];
+---
+
+<div class="navbar">
+  <div class="container">
+    <a href="/" class="logo">FZ</a>
+    <nav>
+      <ul class="menu">
+        {
+          navLinks.map(({ label, href }) => (
+            <li>
+              <a class="link" href={href}>
+                {label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<style>
+  .navbar {
+    background-color: rgb(var(--foreground-color));
+    color: rgb(var(--background-color));
+    padding: 0 0.3rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1024px;
+    width: 100%;
+    margin: auto;
+    @media screen and (max-width: 516px) {
+      flex-direction: column;
+    }
+  }
+
+  .logo {
+    color: rgb(var(--background-color));
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0.6rem;
+    transition: color 0.3s ease-out;
+    &:hover {
+      color: rgb(var(--primary-color));
+      transition: none;
+    }
+
+    
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0.6rem;
+    padding: 0;
+  }
+
+  .link {
+    color: rgb(var(--background-color));
+    padding: 0.6rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease-out;
+    &:hover {
+      background-color: rgba(var(--background-color), 0.3);
+      transition: none;
+    }
+  }
+</style>

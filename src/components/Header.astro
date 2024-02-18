@@ -1,0 +1,23 @@
+---
+import Navigation from "./Navigation.astro";
+const { pageTitle } = Astro.props;
+---
+
+<header>
+  <Navigation />
+  {
+    pageTitle ? (
+      <div class="heading">
+        <h1>{pageTitle}</h1>
+      </div>
+    ) : null
+  }
+</header>
+
+<style>
+  .heading {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+</style>

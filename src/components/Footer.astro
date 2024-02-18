@@ -1,0 +1,37 @@
+<footer class="container">
+  <div class="width-container">
+    <p>
+      Creado con <a class="link" target="_blank" href="https://astro.build/"
+        >Astro</a
+      >
+    </p>
+    <p>
+      <a
+        class="link"
+        target="_blank"
+        href="https://github.com/FrancoZurschmitten/portfolio-astro"
+        >Repositorio en Github</a
+      >
+    </p>
+  </div>
+</footer>
+
+<style>
+  .container {
+    border-top: 3px solid rgb(var(--primary-color));
+  }
+  .width-container {
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .link {
+    text-decoration: none;
+    color: rgb(var(--primary-color));
+    font-weight: bold;
+    &:hover {
+      color: rgb(var(--secondary-color));
+    }
+  }
+</style>
